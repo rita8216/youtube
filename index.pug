@@ -1,0 +1,62 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title CodePen - A Pen by chia-lun
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap')
+    link(rel='stylesheet' href='css/style.css')
+  body
+    // partial:index.partial.html
+    #youtube
+      nav.nav
+        .logo
+          img(src='https://i.imgur.com/rKRqVG3.png' alt='')
+        .member
+          i.fas.fa-user
+        .search
+          .icon
+            i.fas.fa-search
+      section#sort
+        .btn.btnphone(v-for='btn in btns.slice(0,4)') {{btn}}
+        .btn.btnpad(v-for='btn in btns.slice(0,7)') {{btn}}
+        .btn.btnlaptop(v-for='btn in btns.slice(0,10)') {{btn}}
+        .btn.btnpc(v-for='btn in btns.slice(0,12)') {{btn}}
+      section#video
+        .container
+          .videoBox(v-for='video in videos')
+            .top
+              img.video(:src='video.video_img' alt='')
+              .time {{video.time}}
+              .later
+                i.fas.fa-clock
+              .plus
+                i.fas.fa-plus
+            .bottom
+              .creatorPic
+                img(:src='video.creator_img' alt='')
+              .info
+                .title {{video.title}} 
+                .views {{video.creator}}．觀看 {{video.views}}次．{{video.date}}前
+              .dots
+                .dot
+                .dot
+                .dot
+      section#bottomMenu
+        .bottomIcon
+          i.fas.fa-home
+          h5 首頁
+        .bottomIcon
+          i.fas.fa-fire
+          h5 發燒
+        .bottomIcon
+          i.far.fa-play-circle
+          h5 訂閱內容
+        .bottomIcon
+          i.fas.fa-photo-video
+          h5 媒體庫
+    // partial
+    script(src='https://kit.fontawesome.com/e38d88a225.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+    script(src='js/script.js')

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CodePen - A Pen by chia-lun</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&amp;display=swap">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- partial:index.partial.html-->
+    <div id="youtube">
+      <nav class="nav">
+        <div class="logo"><img src="https://i.imgur.com/rKRqVG3.png" alt=""></div>
+        <div class="member"><i class="fas fa-user"></i></div>
+        <div class="search">
+          <div class="icon"><i class="fas fa-search"></i></div>
+        </div>
+      </nav>
+      <section id="sort">
+        <div class="btn btnphone" v-for="btn in btns.slice(0,4)">{{btn}}</div>
+        <div class="btn btnpad" v-for="btn in btns.slice(0,7)">{{btn}}</div>
+        <div class="btn btnlaptop" v-for="btn in btns.slice(0,10)">{{btn}}</div>
+        <div class="btn btnpc" v-for="btn in btns.slice(0,12)">{{btn}}</div>
+      </section>
+      <section id="video">
+        <div class="container">
+          <div class="videoBox" v-for="video in videos">
+            <div class="top"><img class="video" :src="video.video_img" alt="">
+              <div class="time">{{video.time}}</div>
+              <div class="later"><i class="fas fa-clock"></i></div>
+              <div class="plus"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="bottom">
+              <div class="creatorPic"><img :src="video.creator_img" alt=""></div>
+              <div class="info">
+                <div class="title">{{video.title}} </div>
+                <div class="views">{{video.creator}}．觀看 {{video.views}}次．{{video.date}}前</div>
+              </div>
+              <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="bottomMenu">
+        <div class="bottomIcon"><i class="fas fa-home"></i>
+          <h5>首頁</h5>
+        </div>
+        <div class="bottomIcon"><i class="fas fa-fire"></i>
+          <h5>發燒</h5>
+        </div>
+        <div class="bottomIcon"><i class="far fa-play-circle"></i>
+          <h5>訂閱內容</h5>
+        </div>
+        <div class="bottomIcon"><i class="fas fa-photo-video"></i>
+          <h5>媒體庫</h5>
+        </div>
+      </section>
+    </div>
+    <!-- partial-->
+    <script src="https://kit.fontawesome.com/e38d88a225.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
