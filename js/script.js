@@ -1,6 +1,6 @@
 var videodatas=[
   {
-    video_img: "https://i.imgur.com/jnrYhEs.png",
+    video_img,
     time:"17:32",
     title: "✿沈✿ 台北美食 超讚夜市 巨推 雙城街夜市 多汁唐揚雞 美味芒果燉奶 ",
     creator: "陪沈團",
