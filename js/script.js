@@ -234,22 +234,10 @@ var vm=new Vue({
     videos: videodatas,
     btns: btndatas
   }
-  // mounted: function(){
-   // $.ajax({
-   //    url:"https://awiclass.monoame.com/api/command.php?type=get&name=projects",
-   //    success: function(res){
-   //      vm.works=JSON.parse(res);
-   //    }
-   // });
+
 });
 
-// if($(window).width<600px){
-  
-// }else if($(window).width<850px){
-  
-// }else if($(window).width<1024px){
-  
-// }else{
-  
-// };
+$('.btn').on('click', function(){ $('.btn').removeClass('active'); 
+  $(this).addClass('active'); });
+
   

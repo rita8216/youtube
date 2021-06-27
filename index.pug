@@ -18,9 +18,10 @@ html(lang='en')
           .icon
             i.fas.fa-search
       section#sort
-        .btn.btnphone(v-for='btn in btns.slice(0,4)') {{btn}}
-        .btn.btnpad(v-for='btn in btns.slice(0,7)') {{btn}}
-        .btn.btnlaptop(v-for='btn in btns.slice(0,10)') {{btn}}
+        
+        .btn.btnphone(v-for='btn in btns.slice(0,5)') {{btn}}
+        .btn.btnpad(v-for='btn in btns.slice(0,6)') {{btn}}
+        .btn.btnlaptop(v-for='btn in btns.slice(0,9)') {{btn}}
         .btn.btnpc(v-for='btn in btns.slice(0,12)') {{btn}}
       section#video
         .container

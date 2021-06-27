@@ -84,17 +84,17 @@ section#sort .btn {
   cursor: pointer;
   display: none;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   section#sort .btn.btnpc {
     display: inline-block;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   section#sort .btn.btnlaptop {
     display: inline-block;
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 860px) {
   section#sort .btn.btnpad {
     display: inline-block;
   }
@@ -106,7 +106,7 @@ section#sort .btn {
   section#sort .btn.btnphone {
     display: inline-block;
   }
-  section#sort .btn.btnpad, section#sort .btn.laptop, section#sort .btn.pc {
+  section#sort .btn.btnpad, section#sort .btn.btnlaptop, section#sort .btn.btnpc {
     display: none;
   }
 }
@@ -114,12 +114,20 @@ section#sort .btn:hover {
   background-color: #a6a6a6;
   color: white;
 }
+section#sort .btn:active {
+  background-color: #444;
+  color: white;
+}
+section#sort .btn.active {
+  background-color: #444;
+  color: white;
+}
 
 section#video {
-  padding: 20px 20px 60px 20px;
+  padding: 10px 10px 60px 10px;
   background-color: #f2f2f2;
 }
-@media (max-width: 850px) {
+@media (max-width: 860px) {
   section#video {
     padding: 0px 0px 60px 0px;
   }
@@ -131,10 +139,6 @@ section#video {
 }
 section#video .container {
   text-align: center;
-  padding: auto;
-  padding-left: auto;
-  padding-right: auto;
-  margin: auto;
 }
 section#video .container .videoBox {
   cursor: pointer;
@@ -142,17 +146,17 @@ section#video .container .videoBox {
   vertical-align: top;
   display: inline-block;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   section#video .container .videoBox {
     width: 23%;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   section#video .container .videoBox {
     width: 31%;
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 860px) {
   section#video .container .videoBox {
     width: 48%;
     margin: 2px;
@@ -191,7 +195,7 @@ section#video .container .videoBox .top .time {
 @media (max-width: 600px) {
   section#video .container .videoBox .top .time {
     font-size: 18px;
-    bottom: 7px;
+    bottom: 10px;
     right: 5px;
   }
 }
@@ -230,6 +234,11 @@ section#video .container .videoBox .bottom {
   position: relative;
   padding-bottom: 10px;
 }
+@media (max-width: 600px) {
+  section#video .container .videoBox .bottom {
+    padding-bottom: 20px;
+  }
+}
 section#video .container .videoBox .bottom .creatorPic {
   height: 100%;
   position: absolute;
@@ -255,11 +264,23 @@ section#video .container .videoBox .bottom .info .title {
   max-height: 35px;
   overflow: hidden;
 }
+@media (max-width: 600px) {
+  section#video .container .videoBox .bottom .info .title {
+    font-size: 15px;
+    max-height: 40px;
+  }
+}
 section#video .container .videoBox .bottom .info .views {
   font-size: 12px;
   color: #4d4d4d;
   max-height: 15px;
   overflow: hidden;
+}
+@media (max-width: 600px) {
+  section#video .container .videoBox .bottom .info .views {
+    font-size: 14px;
+    max-height: 18px;
+  }
 }
 section#video .container .videoBox .bottom .dots {
   width: 15px;
@@ -271,6 +292,7 @@ section#video .container .videoBox .bottom .dots {
 @media (max-width: 600px) {
   section#video .container .videoBox .bottom .dots {
     opacity: 1;
+    right: 5px;
   }
 }
 section#video .container .videoBox .bottom .dots .dot {

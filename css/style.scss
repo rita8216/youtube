@@ -14,23 +14,22 @@
   }
 }
 @mixin pad{
-  @media (max-width:850px){
+  @media (max-width:860px){
     @content
   }
 }
 @mixin laptop{
-  @media (max-width:1024px){
+  @media (max-width:1200px){
     @content
   }
 }
 @mixin pc{
-  @media (min-width:1024px){
+  @media (min-width:1200px){
     @content
   }
 }
 
 *{
-  // border: solid 1px black;
   font-family: serif,微軟正黑體;
 }
 
@@ -90,7 +89,7 @@ html,body{
 }
 
 section#sort{
-  // width: 100%;
+  
   margin-top: 60px;
   border-bottom: solid 1px #cccccc;
   padding: 15px 30px;
@@ -127,7 +126,7 @@ section#sort{
       &.btnphone{
         display:inline-block;
       }
-      &.btnpad,&.laptop,&.pc{
+      &.btnpad,&.btnlaptop,&.btnpc{
         display:none;
       }
     }
@@ -136,13 +135,21 @@ section#sort{
       background-color: #a6a6a6;
       color:white;
     }
+    &:active{
+      background-color: #444;
+      color: white;
+    }
+    &.active{
+      background-color: #444;
+      color: white;
+    }
   }
 }
 section#video{
-  padding: 20px 20px 60px 20px ;
+  padding: 10px 10px 60px 10px ;
   background-color: #f2f2f2;
-  // padding-bottom: 60px;
-   @include pad{
+  
+  @include pad{
     padding: 0px 0px 60px 0px ;
   }
   @include phone{
@@ -150,12 +157,12 @@ section#video{
   }
   .container{
     text-align:center;
-    padding: auto;
-    padding-left: auto;
-    padding-right: auto;
-    margin: auto;
+    // padding: auto;
+    // padding-left: auto;
+    // padding-right: auto;
+    // margin: auto;
     .videoBox{
-      // width:300px;
+      
       cursor:pointer;
       margin: 5px;
       vertical-align:top;
@@ -183,22 +190,18 @@ section#video{
       }
       .top{
         position: relative;
-        // height:165px;
         padding: 0;
-        @include phone{
-        // width: 100%;
-        // height:250px;
-      }
+        
         .video{
           width: 100%;
-          // position: absolute;
+          
           left: 0;
           margin: 0;
           padding: 0;
           
         }
         .time{
-          // @include size(30px,13px);
+          
           position: absolute;
           bottom: 6px;
           right: 2px;
@@ -209,9 +212,8 @@ section#video{
           text-align:center;
           border-radius: 1px;
           @include phone{
-            // @include size(40px,20px);
               font-size: 18px;
-              bottom: 7px;
+              bottom: 10px;
               right: 5px;
           }
         }
@@ -244,11 +246,11 @@ section#video{
         height: 80px;
         position: relative;
         padding-bottom: 10px;
-        // padding-top: 10px;
-        // display: inline-block;
+        @include phone{
+          padding-bottom: 20px;
+        }
         .creatorPic{
           height: 100%;
-          // display: inline-block;
           position: absolute;
           padding: 10px;
           box-sizing: border-box;
@@ -259,7 +261,6 @@ section#video{
         }
         .info{
           width: calc(100% - 80px);
-          // display: inline-block;
           position: absolute;
           right: 25px;
           text-align:left;
@@ -269,20 +270,21 @@ section#video{
             margin-bottom: 8px;
             max-height: 35px;
             overflow: hidden;
-            // height:40px;
+            @include phone{
+              font-size: 15px;
+              max-height: 40px;
+            }
           }
-          // .creatorName{
-          //   font-size: 14px;
-          //   color:#4d4d4d;
-          //   &:hover{
-          //     color:#333333;
-          //   }
-          // }
+          
           .views{
             font-size: 12px;
             color:#4d4d4d;
             max-height: 15px;
             overflow: hidden;
+            @include phone{
+              font-size: 14px;
+              max-height: 18px;
+            }
           }
         }
         .dots{
@@ -293,6 +295,7 @@ section#video{
           margin-top: 10px;
            @include phone{
             opacity:1;
+            right:5px;
           }
           .dot{
             @include size(4px,4px);
